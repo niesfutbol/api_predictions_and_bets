@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     image: nepolin/api_predictions_and_bets
     ports:
-      - "6969:80"
+      - "8383:80"
     volumes:
       - $PWD:/workdir
