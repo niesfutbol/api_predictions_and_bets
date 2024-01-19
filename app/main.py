@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 import json
-import players_from_as as pfa
+import pandas as pd
 
+premier_league = pd.read_csv("./predictions_39_2023_0.csv.csv")
+serie_a = pd.read_csv("./predictions_135_2023_0.csv.csv")
+bets = pd.concat([premier_league, serie_a], ignore_index=True).sort_values(by=['date'])
 
 f = open("./players.json")
 players = json.load(f)
