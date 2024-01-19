@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  nies:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nepolin/api_nies
+    ports:
+      - "6969:80"
+    volumes:
+      - $PWD:/workdir
