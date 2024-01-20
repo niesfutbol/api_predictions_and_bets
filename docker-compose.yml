@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 services:
   nies:
     build:
@@ -8,4 +8,4 @@ services:
     ports:
       - "8383:80"
     volumes:
-      - $PWD:/workdir
+      - $PWD/tests/data/:/app/data/
